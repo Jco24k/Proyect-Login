@@ -10,6 +10,7 @@ import { EmployeesModule } from './employees/employees.module';
 import { RolesModule } from './roles/roles.module';
 import { UserModule } from './user/user.module';
 import { SeedModule } from './seed/seed.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -19,13 +20,14 @@ import { SeedModule } from './seed/seed.module';
         validationSchema: JoiValidationSchema 
       }
     ),
-    MongooseModule.forRoot(process.env.MONGO_DB),
+    DatabaseModule,
     CommonModule,
     AuthModule,
     EmployeesModule,
     RolesModule,
     UserModule,
-    SeedModule
+    SeedModule,
+    DatabaseModule
   ]
 })
 export class AppModule {}
