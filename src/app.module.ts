@@ -27,7 +27,6 @@ import { DatabaseModule } from './database/database.module';
     RolesModule,
     UserModule,
     SeedModule,
-    DatabaseModule
   ]
 })
 export class AppModule {}

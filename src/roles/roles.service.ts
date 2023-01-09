@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { isValidObjectId, Model } from 'mongoose';
-import { User } from 'src/User/entities/User.entity';
+import { User } from '../User/entities/User.entity';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
 import { Role } from './entities/role.entity';
@@ -52,8 +52,8 @@ export class RolesService {
   }
 
   async remove(id: string) {
-    const User = await this.userModel.findOne({id_role:id});
-    if(User) throw new InternalServerErrorException(`The role with id ${User.roles} cannot be deleted because it is in use.`)
+    const user = await this.userModel.findOne({id_role:id});
+    if(user) throw new InternalServerErrorException(`The role with id ${user.roles} cannot be deleted because it is in use.`)
     const { deletedCount } = await this.roleModel.deleteOne({ _id: id });
     if (deletedCount === 0) throw new BadRequestException(`Role with id ${id} not found`);
     return { message: `Role with id ${id} deleted successfully` };

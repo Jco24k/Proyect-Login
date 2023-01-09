@@ -5,15 +5,15 @@ import { JwtStrategy } from './strategy/jwt.strategy';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
-import { EmployeesModule } from 'src/employees/employees.module';
-import { UserModule } from 'src/user/user.module';
+import { EmployeesModule } from '../employees/employees.module';
+import { UserModule } from '../user/user.module';
 
 @Module({
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy],
-  exports:[
-    JwtStrategy,PassportModule, JwtModule, AuthService
-],
+  exports: [
+    JwtStrategy, PassportModule, JwtModule, AuthService
+  ],
   imports: [
     ConfigModule,
     PassportModule.register({ //PARA EL JWT

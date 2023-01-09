@@ -2,8 +2,8 @@ import { Optional } from "@nestjs/common";
 import { ApiProperty } from "@nestjs/swagger";
 import { IsArray, IsBoolean, IsEmail, IsNotEmpty, IsOptional, IsString, Matches, MaxLength, MinLength } from "class-validator";
 import { Types } from "mongoose";
-import { IsMongoIdValid } from "src/common/validator/mongoId_or_empy.validator";
-import { Role } from "src/roles/entities/role.entity";
+import { IsMongoIdValid } from "../../common/validator/mongoId_or_empy.validator";
+import { Role } from "../../roles/entities/role.entity";
 
 
 export class CreateUserDto {

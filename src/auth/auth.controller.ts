@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, HttpCode } from '@nestjs/common';
 import { ApiBody, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { GetUser } from './decorators/get-user.decorator';
@@ -12,6 +12,7 @@ export class AuthController {
 
   @Post()
   @ApiResponse({ status: 401, description: 'Auth UnauthorizedException', type: AuthUserDto })
+  @HttpCode(200)
   signIn(@Body() loginUserDto: AuthUserDto) {
     return this.authService.auth(loginUserDto);
   }

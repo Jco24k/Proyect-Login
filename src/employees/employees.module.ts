@@ -3,8 +3,8 @@ import { EmployeesService } from './employees.service';
 import { EmployeesController } from './employees.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Employee, EmployeeSchema } from './entities/employee.entity';
-import { RolesModule } from 'src/roles/roles.module';
-import { AuthModule } from 'src/auth/auth.module';
+import { RolesModule } from '../roles/roles.module';
+import { AuthModule } from '../auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({

@@ -2,7 +2,7 @@ import { DynamicModule } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { MongooseModule } from "@nestjs/mongoose";
 import { ConnectOptions } from "mongoose";
-import { Environment } from "src/common/enum/enviroment.enum";
+import { Environment } from "../common/enum/enviroment.enum";
 
 
 export const DatabaseProvider: DynamicModule = MongooseModule.forRootAsync({

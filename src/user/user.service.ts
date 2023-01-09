@@ -3,17 +3,17 @@ import { BadRequestException, InternalServerErrorException, NotFoundException, U
 import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import { isValidObjectId, Model, PipelineStage, Types } from 'mongoose';
-import { PaginationDto } from 'src/common/dto/pagination.dto';
+import { PaginationDto } from '../common/dto/pagination.dto';
 import { User } from './entities/user.entity';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
-import { JwtPayload } from 'src/auth/interfaces/jwt-payload.interface';
-import { Role } from 'src/roles/entities/role.entity';
-import { Employee } from 'src/employees/entities/employee.entity';
+import { JwtPayload } from '../auth/interfaces/jwt-payload.interface';
+import { Role } from '../roles/entities/role.entity';
+import { Employee } from '../employees/entities/employee.entity';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { EmployeesService } from 'src/employees/employees.service';
-import { AuthService } from 'src/auth/auth.service';
+import { EmployeesService } from '../employees/employees.service';
+import { AuthService } from '../auth/auth.service';
 
 @Injectable()
 export class UserService {

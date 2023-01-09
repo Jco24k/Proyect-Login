@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { ApiProperty } from "@nestjs/swagger";
 import { Document, Types } from "mongoose";
-import { Employee } from "src/employees/entities/employee.entity";
-import { Role } from "src/roles/entities/role.entity";
+import { Employee } from "../../employees/entities/employee.entity";
+import { Role } from "../../roles/entities/role.entity";
 
 @Schema()
 export class User extends Document {

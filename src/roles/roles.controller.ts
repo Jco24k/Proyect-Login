@@ -2,8 +2,8 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ParseUUIDPipe } from
 import { RolesService } from './roles.service';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { UpdateRoleDto } from './dto/update-role.dto';
-import { ParseMongoIdPipe } from 'src/common/pipes/parse-mongo-id.pipe';
-import { Auth, validRoles } from 'src/auth/interfaces';
+import { ParseMongoIdPipe } from '../common/pipes/parse-mongo-id.pipe';
+import { Auth, validRoles } from '../auth/interfaces';
 import { ApiBearerAuth, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Role } from './entities/role.entity';
 

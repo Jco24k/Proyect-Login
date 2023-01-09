@@ -5,8 +5,8 @@ import { InjectModel } from "@nestjs/mongoose";
 import { PassportStrategy } from "@nestjs/passport";
 import { Model } from "mongoose";
 import { ExtractJwt, Strategy } from "passport-jwt";
-import { Role } from "src/roles/entities/role.entity";
-import { User } from "src/User/entities/User.entity";
+import { Role } from "../../roles/entities/role.entity";
+import { User } from "../../User/entities/User.entity";
 import { JwtPayload } from "../interfaces/jwt-payload.interface";
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) { //VALIDACION DEL JWT PERSONALIZADO

@@ -1,17 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
-import { AuthModule } from 'src/auth/auth.module';
-import { AuthService } from 'src/auth/auth.service';
-import { EmployeesModule } from 'src/employees/employees.module';
-import { EmployeesService } from 'src/employees/employees.service';
-import { Employee } from 'src/employees/entities/employee.entity';
-import { Role } from 'src/roles/entities/role.entity';
-import { RolesModule } from 'src/roles/roles.module';
-import { RolesService } from 'src/roles/roles.service';
-import { CreateUserDto } from 'src/user/dto/create-user.dto';
-import { User } from 'src/User/entities/User.entity';
-import { UserService } from 'src/user/user.service';
+import { AuthModule } from '../auth/auth.module';
+import { AuthService } from '../auth/auth.service';
+import { EmployeesModule } from '../employees/employees.module';
+import { EmployeesService } from '../employees/employees.service';
+import { Employee } from '../employees/entities/employee.entity';
+import { Role } from '../roles/entities/role.entity';
+import { RolesModule } from '../roles/roles.module';
+import { RolesService } from '../roles/roles.service';
+import { CreateUserDto } from '../user/dto/create-user.dto';
+import { User } from '../User/entities/User.entity';
+import { UserService } from '../user/user.service';
 import { initialData } from './data/seed-data';
 
 

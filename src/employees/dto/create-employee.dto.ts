@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsString, MinLength, IsNotEmpty, IsOptional, IsBoolean, IsEmail, IsNumber, Matches, IsArray, maxLength } from "class-validator";
-import { IsDniValid } from "src/common/validator/isdnivalid.validator";
-import { PhoneValid } from "src/common/validator/phone_valid.validator";
+import { IsDniValid } from "../../common/validator/isdnivalid.validator";
+import { PhoneValid } from "../../common/validator/phone_valid.validator";
 
 export class CreateEmployeeDto {
 

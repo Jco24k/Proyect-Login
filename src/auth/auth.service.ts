@@ -1,7 +1,7 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Model } from 'mongoose';
-import { User } from 'src/User/entities/User.entity';
+import { User } from '../User/entities/User.entity';
 import { AuthUserDto } from './dto/auth-user.dto';
 import { JwtPayload } from './interfaces';
 import * as bcrypt from 'bcrypt';
